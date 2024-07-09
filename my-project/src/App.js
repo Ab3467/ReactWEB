@@ -15,7 +15,7 @@ export default function App() {
   function HandleChange(identifier, newValue) {
     setInput((prevValue) => ({
       ...prevValue,
-      [identifier]: newValue,
+      [identifier]: +newValue,
     }));
   } 
 
@@ -23,7 +23,7 @@ export default function App() {
     <div>
       <Header/>
       <UserInput HandleChange={(e) => HandleChange("InitialInvestment" , e.target.value)} input={input}/>
-      <Results/>
+      <Results input={input}/>
     </div>
   )
 }
