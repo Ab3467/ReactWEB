@@ -1,8 +1,14 @@
 import React,{useState} from "react";
 
 export default function UserInput() {
-    const [input,setInput] = useState("");
+    const [input,setInput] = useState({
+        InitialInvestment: 10000,
+        AnnualInvestment:1200,
+        ExpectedReturn : 6,
+        Duration:10
+    });
     
+
   return (
     <section id="user-input">
       <div className="input-group">
