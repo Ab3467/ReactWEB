@@ -19,7 +19,7 @@ export default function UserInput({ HandleChange, input }) {
             type="number"
             required
             value={input.AnnualInvestment}
-            onChange={(e) => HandleChange("AnnualInvestment", e.target.value)}
+            onChange={(e)=>HandleChange('AnnualInvestment',e.target.value)}
           />
         </p>
       </div>
