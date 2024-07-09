@@ -18,7 +18,7 @@ export default function Results({ input }) {
         </tr>
       </thead>
       <tbody>
-        {resultData.map((yearData) => {
+        {resultData.map((yearData)=> {
           const totalInterest =
             yearData.valueEndOfYear -
             initialInvestment -
