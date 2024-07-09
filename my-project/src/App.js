@@ -19,7 +19,7 @@ export default function App() {
     }));
   };
   
-  const isValid = input.Duration >= 1;
+ const isValid = input.Duration >= 1;
 
   return(
     <div>
