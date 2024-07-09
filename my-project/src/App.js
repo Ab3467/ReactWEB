@@ -12,12 +12,13 @@ export default function App() {
     Duration: 10,
   });
 
-  function HandleChange(identifier, newValue) {
+  const HandleChange = (identifier, newValue) => {
     setInput((prevValue) => ({
       ...prevValue,
       [identifier]: +newValue,
     }));
-  } 
+  };
+  
 
   return (
     <div>
