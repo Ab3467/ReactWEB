@@ -24,7 +24,7 @@ export default function App() {
     <div>
       <Header/>
       <UserInput HandleChange={(e) => HandleChange("InitialInvestment" , e.target.value)} input={input}/>
-      <Results input={input}/>
+      {/* <Results input={input}/> */}
     </div>
   )
 }
