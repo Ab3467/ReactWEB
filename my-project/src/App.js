@@ -15,7 +15,7 @@ export default function App() {
   const HandleChange = (identifier, newValue) => {
     setInput((prevValue) => ({
       ...prevValue,
-      [identifier]: +newValue,
+      [identifier]: newValue,
     }));
   };
   
@@ -25,7 +25,7 @@ export default function App() {
     <div>
       <Header/>
       <UserInput HandleChange={HandleChange} input={input}/>
-     {isValid ? <Results input={input}/> : <p>Please Enter Valid Input Data</p>}
+     {isValid ? <Results input={input}/> : <p className="center">Please Enter Valid Input Data</p>}
     </div>
   )
 }
