@@ -3,9 +3,8 @@ import { calculateInvestmentResults, formatter } from "../util/investment";
 
 export default function Results({ input }) {
   const resultData = calculateInvestmentResults(input);
-  // console.log(resultData); // Log resultData to check its contents
 
-  const initialInvestment = input.initialInvestment || 0; // Ensure initialInvestment has a fallback value
+  const initialInvestment = input.initialInvestment || 0; 
 
   return (
     <table id="result">
