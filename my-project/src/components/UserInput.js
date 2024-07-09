@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+
 export default function UserInput() {
   const [input, setInput] = useState({
     InitialInvestment: 10000,
@@ -8,19 +9,17 @@ export default function UserInput() {
     Duration: 10,
   });
 
-  function HandleChange(InitialIdentifier, newValue) {
-    setInput((prevValue) => {
-      return {
-        ...prevValue,
-        [InitialIdentifier]: newValue,
-      };
-    });
+  function HandleChange(identifier, newValue) {
+    setInput((prevValue) => ({
+      ...prevValue,
+      [identifier]: newValue,
+    }));
   }
 
   return (
     <section id="user-input">
       <div className="input-group">
-        <p>
+        <div>
           <label>Initial Investment</label>
           <input
             type="number"
@@ -28,8 +27,8 @@ export default function UserInput() {
             value={input.InitialInvestment}
             onChange={(e) => HandleChange("InitialInvestment", e.target.value)}
           />
-        </p>
-        <p>
+        </div>
+        <div>
           <label>Annual Investment</label>
           <input
             type="number"
@@ -37,17 +36,19 @@ export default function UserInput() {
             value={input.AnnualInvestment}
             onChange={(e) => HandleChange("AnnualInvestment", e.target.value)}
           />
-        </p>
-        <p>
+        </div>
+      </div>
+      <div className="input-group">
+        <div>
           <label>Expected Return</label>
           <input
             type="number"
             required
             value={input.ExpectedReturn}
-            onChange={(e) => HandleChange("ExpecredReturn", e.target.value)}
+            onChange={(e) => HandleChange("ExpectedReturn", e.target.value)}
           />
-        </p>
-        <p>
+        </div>
+        <div>
           <label>Duration</label>
           <input
             type="number"
@@ -55,7 +56,7 @@ export default function UserInput() {
             value={input.Duration}
             onChange={(e) => HandleChange("Duration", e.target.value)}
           />
-        </p>
+        </div>
       </div>
     </section>
   );
