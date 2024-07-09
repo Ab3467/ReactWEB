@@ -21,7 +21,7 @@ export default function App() {
   
   const isValid = input.Duration >= 1;
 
-  return (
+  return(
     <div>
       <Header/>
       <UserInput HandleChange={HandleChange} input={input}/>
