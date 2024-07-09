@@ -42,7 +42,7 @@ export default function App() {
     <div>
       <h1>React Essentials</h1>
       <p>
-        {array[genRandomInt(2)]} concept in react are
+        {array[genRandomInt(4)]} concept in react are
       </p>
     </div>
   )
