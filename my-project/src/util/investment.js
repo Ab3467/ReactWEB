@@ -20,7 +20,7 @@ export function calculateInvestmentResults({
     });
   }
 
-  return annualData;
+  return annualData
 }
 
 export const formatter = new Intl.NumberFormat("en-US", {
