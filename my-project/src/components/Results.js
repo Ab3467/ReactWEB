@@ -3,9 +3,7 @@ import { calculateInvestmentResults, formatter } from "../util/investment";
 
 export default function Results({ input }) {
   const resultData = calculateInvestmentResults(input);
-  console.log(resultData); // Log resultData to check its contents
-
-  const initialInvestment = input.initialInvestment || 0; // Ensure initialInvestment has a fallback value
+  console.log(resultData);
 
   return (
     <table id="result">
@@ -19,23 +17,15 @@ export default function Results({ input }) {
         </tr>
       </thead>
       <tbody>
-        {resultData.map((yearData) => {
-          const totalInterest =
-            yearData.valueEndOfYear -
-            initialInvestment -
-            yearData.annualInvestment * yearData.year;
-          const totalInvested = yearData.valueEndOfYear - totalInterest;
-
-          return (
-            <tr key={yearData.year}>
-              <td>{yearData.year}</td>
-              <td>{formatter.format(yearData.valueEndOfYear)}</td>
-              <td>{formatter.format(yearData.interest)}</td>
-              <td>{formatter.format(totalInterest)}</td>
-              <td>{formatter.format(totalInvested)}</td>
-            </tr>
-          );
-        })}
+        {resultData.map((yearData) => (
+          <tr key={yearData.year}>
+            <td>{yearData.year}</td>
+            <td>{formatter.format(yearData.valueEndOfYear)}</td>
+            <td>{formatter.format(yearData.interest)}</td>
+            <td>{formatter.format(yearData.totalInterest)}</td>
+            <td>{formatter.format(yearData.investedCapital)}</td>
+          </tr>
+        ))}
       </tbody>
     </table>
   );

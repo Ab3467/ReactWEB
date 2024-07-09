@@ -19,12 +19,13 @@ export default function App() {
     }));
   };
   
+  const isValid = input.Duration >= 1;
 
   return (
     <div>
       <Header/>
-      <UserInput HandleChange={(e) => HandleChange("InitialInvestment" , e.target.value)} input={input}/>
-      {/* <Results input={input}/> */}
+      <UserInput HandleChange={HandleChange} input={input}/>
+     {isValid ? <Results input={input}/> : <p>Please Enter Valid Input Data</p>}
     </div>
   )
 }
