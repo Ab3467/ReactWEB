@@ -15,6 +15,9 @@ export default function Results({ input }) {
           <th>Invested Capital</th>
         </tr>
       </thead>
+      <tbody>{resultData.map((YearData) => {
+        return <tr key={YearData.year}></tr>
+      })}</tbody>
     </table>
   );
 }
