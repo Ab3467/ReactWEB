@@ -1,40 +1,60 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 
 export default function UserInput() {
-    const [input,setInput] = useState({
-        InitialInvestment: 10000,
-        AnnualInvestment:1200,
-        ExpectedReturn : 6,
-        Duration:10
-    });
+  const [input, setInput] = useState({
+    InitialInvestment: 10000,
+    AnnualInvestment: 1200,
+    ExpectedReturn: 6,
+    Duration: 10,
+  });
 
-    function HandleChange (InitialIdentifier,newValue){
-       setInput((prevValue)=>{
-        return{
-            ...prevValue,
-            [InitialIdentifier]: newValue
-        }
-       })
-    }
+  function HandleChange(InitialIdentifier, newValue) {
+    setInput((prevValue) => {
+      return {
+        ...prevValue,
+        [InitialIdentifier]: newValue,
+      };
+    });
+  }
 
   return (
     <section id="user-input">
       <div className="input-group">
         <p>
           <label>Initial Investment</label>
-          <input type="number" required onChange={(e)=>HandleChange('InitialInvestment',e.target.value)}/>
+          <input
+            type="number"
+            required
+            value={input}
+            onChange={(e) => HandleChange("InitialInvestment", e.target.value)}
+          />
         </p>
         <p>
           <label>Annual Investment</label>
-          <input type="number" required />
+          <input
+            type="number"
+            required
+            value={input}
+            onChange={(e) => HandleChange("AnnualInvestment", e.target.value)}
+          />
         </p>
         <p>
           <label>Expected Return</label>
-          <input type="number" required />
+          <input
+            type="number"
+            required
+            value={input}
+            onChange={(e) => HandleChange("ExpecredReturn", e.target.value)}
+          />
         </p>
         <p>
           <label>Duration</label>
-          <input type="number" required />
+          <input
+            type="number"
+            required
+            value={input}
+            onChange={(e) => HandleChange("Duration", e.target.value)}
+          />
         </p>
       </div>
     </section>
