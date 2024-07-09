@@ -20,7 +20,7 @@ export default function Results({ input }) {
           <tr key={yearData.year}>
             <td>{yearData.year}</td>
             <td>{formatter.format(yearData.valueEndOfYear)}</td>
-            <td>{formatter.format(yearData.yearlyInterest)}</td>
+            <td>{formatter.format(yearData.interest)}</td>
             <td>{formatter.format(yearData.totalInterest)}</td>
             <td>{formatter.format(yearData.investedCapital)}</td>
           </tr>

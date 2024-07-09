@@ -1,8 +1,6 @@
 import React from "react";
 
-
-export default function UserInput({HandleChange,input}) {
-
+export default function UserInput({ HandleChange, input }) {
   return (
     <section id="user-input">
       <div className="input-group">
@@ -12,7 +10,7 @@ export default function UserInput({HandleChange,input}) {
             type="number"
             required
             value={input.InitialInvestment}
-            onChange={(e) => HandleChange("InitialInvestment" , e.target.value)}
+            onChange={(e) => HandleChange("InitialInvestment", e.target.value)}
           />
         </p>
         <p>
@@ -21,7 +19,7 @@ export default function UserInput({HandleChange,input}) {
             type="number"
             required
             value={input.AnnualInvestment}
-            onChange={(e) => HandleChange("AnnualInvestment",e.target.value)}
+            onChange={(e) => HandleChange("AnnualInvestment", e.target.value)}
           />
         </p>
       </div>
