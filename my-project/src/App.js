@@ -18,8 +18,8 @@ export default function App() {
       [identifier]: newValue,
     }));
   };
-  
- const isValid = input.Duration >= 1;
+
+  const isValid = input.Duration >=0;
 
   return(
     <div>
