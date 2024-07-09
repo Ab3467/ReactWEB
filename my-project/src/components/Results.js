@@ -4,7 +4,7 @@ import { calculateInvestmentResults, formatter } from "../util/investment";
 export default function Results({ input }) {
   const resultData = calculateInvestmentResults(input);
 
-  const initialInvestment = input.initialInvestment || 0; 
+  const initialInvestment = input.initialInvestment || 0;
 
   return (
     <table id="result">
