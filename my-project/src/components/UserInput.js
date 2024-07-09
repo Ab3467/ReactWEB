@@ -7,14 +7,22 @@ export default function UserInput() {
         ExpectedReturn : 6,
         Duration:10
     });
-    
+
+    function HandleChange (InitialIdentifier,newValue){
+       setInput((prevValue)=>{
+        return{
+            ...prevValue,
+            [InitialIdentifier]: newValue
+        }
+       })
+    }
 
   return (
     <section id="user-input">
       <div className="input-group">
         <p>
           <label>Initial Investment</label>
-          <input type="number" required />
+          <input type="number" required onChange={(e)=>HandleChange('InitialInvestment',e.target.value)}/>
         </p>
         <p>
           <label>Annual Investment</label>
