@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React,{useState} from "react";
 import Header from "./components/Header";
+import "../src/index.css"
 import UserInput from "./components/UserInput";
 import Results from "./components/Results";
-import "../src/index.css";
 
 export default function App() {
   const [input, setInput] = useState({
@@ -13,17 +13,17 @@ export default function App() {
   });
 
   function HandleChange(identifier, newValue) {
-    setInput((prevInput) => ({
-      ...prevInput,
+    setInput((prevValue) => ({
+      ...prevValue,
       [identifier]: +newValue,
     }));
-  }
+  } 
 
   return (
     <div>
-      <Header />
-      <UserInput HandleChange={HandleChange} input={input} />
-      <Results input={input} />
+      <Header/>
+      <UserInput HandleChange={(e) => HandleChange("InitialInvestment" , e.target.value)} input={input}/>
+      <Results input={input}/>
     </div>
-  );
+  )
 }
