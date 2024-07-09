@@ -3,7 +3,7 @@ import { calculateInvestmentResults, formatter } from "../util/investment";
 
 export default function Results({ input }) {
   const resultData = calculateInvestmentResults(input);
-  console.log(resultData);
+
   return (
     <table id="result">
       <thead>
@@ -15,15 +15,17 @@ export default function Results({ input }) {
           <th>Invested Capital</th>
         </tr>
       </thead>
-      <tbody>{resultData.map((YearData) => {
-        return <tr key={YearData.year}>
-            <td>{YearData.year}</td>
-            <td>{formatter.format(YearData.valueEndOfYear )}</td>
-            <td>{formatter.format(YearData.interest)}</td>
-            <td></td>
-            <td></td>
-        </tr>
-      })}</tbody>
+      <tbody>
+        {resultData.map((yearData) => (
+          <tr key={yearData.year}>
+            <td>{yearData.year}</td>
+            <td>{formatter.format(yearData.valueEndOfYear)}</td>
+            <td>{formatter.format(yearData.yearlyInterest)}</td>
+            <td>{formatter.format(yearData.totalInterest)}</td>
+            <td>{formatter.format(yearData.investedCapital)}</td>
+          </tr>
+        ))}
+      </tbody>
     </table>
   );
 }
