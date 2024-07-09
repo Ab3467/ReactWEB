@@ -1,6 +1,8 @@
-import React from "react";
+import React,{useState} from "react";
 
 export default function UserInput() {
+    const [input,setInput] = useState("");
+    
   return (
     <section id="user-input">
       <div className="input-group">
