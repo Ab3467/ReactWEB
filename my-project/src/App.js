@@ -12,7 +12,7 @@ export default function App() {
     Duration: 10,
   });
 
-  const ValidDuration = input.Duration >= 0;
+  const ValidDuration = input.Duration >= 1;
 
   function HandleInput(InitialValue, newValue) {
     setInput((prevValue) => {
