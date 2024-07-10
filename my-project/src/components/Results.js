@@ -5,8 +5,20 @@ export default function Results({input}) {
   const Results = calculateInvestmentResults(input);
   console.log(Results);
   return (
-    <div>
-      Results...
-    </div>
+    <table id='result'>
+      <thead>
+        <tr>Year</tr>
+        <tr>Investment Value</tr>
+        <tr>Interest (Value)</tr>
+        <tr>Total Interest</tr>
+        <tr>Invested Capital</tr>
+      </thead>
+      <tbody>
+        {Results.map((data)=>{
+          <tr>{data.year}</tr>
+          
+        })}
+      </tbody>
+    </table>
   )
 }
