@@ -9,24 +9,8 @@ export default function App() {
     <div>
       <Header />
       <UserInput />
+      <Results/>
     </div>
   );
 }
 
-// import React from 'react'
-
-// const array = ['Fundamentals','basics','mendatory','core']
-
-// function genRandomInt(max) {
-//   return Math.floor(Math.random() * (max + 1));
-// }
-// export default function App() {
-//   return (
-//     <div>
-//       <h1>React Essentials</h1>
-//       <p>
-//         {array[genRandomInt(4)]} concept in react are
-//       </p>
-//     </div>
-//   )
-// }
