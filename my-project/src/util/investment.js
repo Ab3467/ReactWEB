@@ -1,5 +1,5 @@
 // Example logic for investment calculation
-export function calculateInvestmentResults({
+export default function calculateInvestmentResults({
   InitialInvestment,
   AnnualInvestment,
   ExpectedReturn,
