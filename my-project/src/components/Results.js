@@ -17,8 +17,13 @@ export default function Results({input}) {
       </thead>
       <tbody>
         {Results.map((data)=>{
-          <th>{data.year}</th>
-          
+          <tr>
+          <td>{data.year}</td>
+          <td>{data.valueEndOfYear}</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          </tr>
         })}
       </tbody>
     </table>
