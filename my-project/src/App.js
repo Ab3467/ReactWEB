@@ -12,6 +12,8 @@ export default function App() {
     Duration: 10,
   });
 
+  const ValidDuration = input.Duration >= 0;
+
   function HandleInput(InitialValue, newValue) {
     setInput((prevValue) => {
       return {
@@ -24,7 +26,7 @@ export default function App() {
     <div>
       <Header />
       <UserInput input={input} HandleInput={HandleInput} />
-      <Results input={input}/>
+     {ValidDuration ? <Results input={input}/> : <p>'Please Enter Correct Number'</p>}
     </div>
   );
 }
