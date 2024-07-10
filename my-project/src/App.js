@@ -18,7 +18,7 @@ export default function App() {
     setInput((prevValue) => {
       return {
         ...prevValue,
-        [InitialValue]: +newValue,
+        [InitialValue]: +newValue
       };
     });
   }
