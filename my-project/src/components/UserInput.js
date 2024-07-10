@@ -8,10 +8,14 @@ export default function UserInput() {
     Duration: 10
   });
 
-  function HandleInput(){
-
+  function HandleInput(InitialValue,newValue){
+    setInput((prevValue)=>{
+      return{
+      ...prevValue,
+      [InitialValue]: newValue
+  }})
   }
-  
+
   return (
       <section id="user-input">
         <div className="input-group">
