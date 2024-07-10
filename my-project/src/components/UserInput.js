@@ -1,20 +1,7 @@
 import React, { useState } from "react";
 
-export default function UserInput() {
-  const [input,setInput] = useState({
-    InitialInvestment: 10000,
-    AnnualInvestment: 300,
-    ExpectedReturn: 6,
-    Duration: 10
-  });
+export default function UserInput({HandleInput,input}) {
 
-  function HandleInput(InitialValue,newValue){
-    setInput((prevValue)=>{
-      return{
-      ...prevValue,
-      [InitialValue]: newValue
-  }})
-  }
 
   return (
       <section id="user-input">
