@@ -25,7 +25,7 @@ export default function UserInput() {
           </p>
           <p>
             <label>Annual Investment</label>
-            <input type="number" onChange={(e)=>HanldeInput()}/>
+            <input type="number" onChange={(e)=>HandleInput('InitialInvestemnt',e.target.value)}/>
           </p>
         </div>
         <div className="input-group">
