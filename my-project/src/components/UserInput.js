@@ -31,7 +31,7 @@ export default function UserInput({ HandleInput, input }) {
           />
         </p>
         <p>
-          <label>Duration</label>
+          <label>Duration</label>65
           <input
             type="number"
             value={input.Duration}
