@@ -24,7 +24,7 @@ export default function App() {
     <div>
       <Header />
       <UserInput input={input} HandleInput={HandleInput} />
-      <Results />
+      <Results input={input}/>
     </div>
   );
 }
