@@ -26,7 +26,7 @@ export default function App() {
     <div>
       <Header />
       <UserInput input={input} HandleInput={HandleInput} />
-     {ValidDuration ? <Results input={input}/> : <p>'Please Enter Correct Number'</p>}
+     {ValidDuration ? <Results input={input}/> : <p className="center">'Please Enter Correct Number'</p>}
     </div>
   );
 }
