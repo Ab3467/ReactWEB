@@ -21,21 +21,21 @@ export default function UserInput() {
         <div className="input-group">
           <p>
             <label>Initial Investment</label>
-            <input type="number"/>
+            <input type="number" value={input.InitialInvestment} onChange={(e)=>HandleInput('InitialInvestment',e.target.value)}/>
           </p>
           <p>
             <label>Annual Investment</label>
-            <input type="number" onChange={(e)=>HandleInput('InitialInvestemnt',e.target.value)}/>
+            <input type="number" value={input.AnnualInvestment} onChange={(e)=>HandleInput('AnnualInvestment',e.target.value)}/>
           </p>
         </div>
         <div className="input-group">
           <p>
             <label>Expected Return</label>
-            <input type="number"/>
+            <input type="number" value={input.ExpectedReturn} onChange={(e)=>HandleInput('ExpectedReturn',e.target.value)}/>
           </p>
           <p>
             <label>Duration</label>
-            <input type="number"/>
+            <input type="number" value={input.Duration} onChange={(e)=>HandleInput('Duration',e.target.value)}/>
           </p>
         </div>
       </section>
