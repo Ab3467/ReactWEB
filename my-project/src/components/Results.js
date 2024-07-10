@@ -1,5 +1,5 @@
 import React from "react";
-import calculateInvestmenthesults,{formatter} from "../util/investment.js";
+import calculateInvestmenthesults, { formatter } from "../util/investment.js";
 
 export default function Results({ input }) {
   const Results = calculateInvestmenthesults(input);
