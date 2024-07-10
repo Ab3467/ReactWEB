@@ -1,21 +1,23 @@
 import React from 'react'
-import calculateInvestmentResults from "../util/investment.js"
+import calculateInvestmenthesults from "../util/investment.js"
 
 export default function Results({input}) {
-  const Results = calculateInvestmentResults(input);
+  const Results = calculateInvestmenthesults(input);
   console.log(Results);
   return (
     <table id='result'>
       <thead>
-        <tr>Year</tr>
-        <tr>Investment Value</tr>
-        <tr>Interest (Value)</tr>
-        <tr>Total Interest</tr>
-        <tr>Invested Capital</tr>
+        <tr>
+        <th>Year</th>
+        <th>Investment Value</th>
+        <th>Interest (Value)</th>
+        <th>Total Interest</th>
+        <th>Invested Capital</th>
+        </tr>
       </thead>
       <tbody>
         {Results.map((data)=>{
-          <tr>{data.year}</tr>
+          <th>{data.year}</th>
           
         })}
       </tbody>
