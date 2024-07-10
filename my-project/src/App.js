@@ -1,25 +1,17 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import Header from "./components/Header";
-import "../src/index.css"
+import "../src/index.css";
 import UserInput from "./components/UserInput";
 import Results from "./components/Results";
 
 export default function App() {
- 
-
- 
-
-  return(
+  return (
     <div>
-      <Header/>
-  
-     
+      <Header />
+      <UserInput />
     </div>
-  )
+  );
 }
-
-
-
 
 // import React from 'react'
 
@@ -38,4 +30,3 @@ export default function App() {
 //     </div>
 //   )
 // }
-
