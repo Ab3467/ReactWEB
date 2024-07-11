@@ -44,6 +44,10 @@ body {
   justify-content: space-evenly;
   gap: 1.5rem;
 }
+.input-group > div {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
 
 #user-input label {
   display: block;

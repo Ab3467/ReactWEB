@@ -4,6 +4,8 @@ import "../src/index.css";
 import UserInput from "./components/UserInput";
 import Results from "./components/Results";
 
+const someVariable = "InitialInvestment"
+
 export default function App() {
   const [input, setInput] = useState({
     InitialInvestment: 10000,
@@ -15,13 +17,16 @@ export default function App() {
   const ValidDuration = input.Duration >= 1;
 
   function HandleInput(InitialValue, newValue) {
+    // Good
     setInput((prevValue) => {
       return {
         ...prevValue,
-        [InitialValue]: +newValue
-      };
+        [InitialValue]:newValue
+      } 
     });
   }
+
+  
   return (
     <div>
       <Header />
