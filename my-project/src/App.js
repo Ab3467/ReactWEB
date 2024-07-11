@@ -4,7 +4,7 @@ import "../src/index.css";
 import UserInput from "./components/UserInput";
 import Results from "./components/Results";
 
-const someVariable = "InitialInvestment"
+// const someVariable = "InitialInvestment"
 
 export default function App() {
   const [input, setInput] = useState({
